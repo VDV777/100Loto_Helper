@@ -115,6 +115,10 @@ class Widget_TicketSide(QGroupBox):
                 enabledCells.append(cell.digit)
         return enabledCells
 
+    def getEnabledCells_str(self) -> str:
+
+        return ', '.join(str(item) for item in self.getEnabledCells())
+
     @property
     def valuesCountToGuess(self) -> int:
 

@@ -1,3 +1,4 @@
+import re
 import sys
 from itertools import combinations
 
@@ -12,6 +13,9 @@ import pyqtgraph as pg
 from CustomWidgets.EventNotofication.EventNotification import EventNotification
 from CustomWidgets.Table.Table_1 import Table_1
 from Main.Main import Main
+from Main.MenuElements.Widget_Combination import Widget_Combination
+from Main.MenuElements.Widget_CombinationsList import Widget_CombinationsList
+from Main.MenuElements.Widget_PlotStatistic import Widget_PlotStatistic
 from Main.MenuElements.Widget_TickerVariant import Widget_TicketVariant
 from Main.MenuElements.Widget_Ticket import Widget_Ticket
 from Main.MenuElements.Widget_TicketSide import Widget_TicketSide
@@ -52,64 +56,33 @@ if __name__ == '__main__':
 
     qApp = QApplication(sys.argv)
 
-    # ei = EventNotification()
+    # w = Widget_CombinationsList()
+    # w.show()
     #
-    # mm = Main()
-    # mm.show()
-    #
-    # d = {1: '1'}
-    # d.setdefault(2, '2')
-    # d.sorted()
+    # w.addCombination('1,2,3,4 + 5,6,3,2')
+    # w.addCombination('1,2,3,4 + 5,6,3,1')
+    # w.addCombination('1,2,3,4 + 5,6,3,3')
+    # w.addCombination('1,2,3,4 + 5,6,3,4')
+    # w.addCombination('1,2,3,4 + 5,6,3,5')
+    # w.addCombination('1,2,3,4 + 5,6,3,6')
+    # w.addCombination('1,2,3,4 + 5,6,3,7')
+    # w.addCombination('1,2,3,4 + 5,6,3,8')
+    # w.addCombination('1,2,3,4 + 5,6,3,9')
+    # w.addCombination('1,2,3,4 + 5,6,3,10')
 
-    # df = pd.DataFrame(data=[{'0': 5, '1': 6, '2': 7, '3': 8}, {'0': 0, '1': 1, '2': 2, '3': 3}], columns=['0', '1', '2', '3'], index=None)
-    # print(df)
-    # print(df.values.tolist())
-    # print(pd.DataFrame(df.values.tolist()))
 
-    # wts = Widget_TicketSide('', 20, 4)
-    # wts.show()
+    # w = Widget_Ticket(2, [4, 4], [20, 20])
+    # w.show()
     #
-    # print(wts.combinations())
-    # wtv = Widget_TicketVariant()
-    # wtv.addVariants(wts.maxValueOfDigits, wts.valuesCountToGuess, wts.combinations())
-    # wtv.show()
-    # qtw = Table_1(df)
-    #
-    # qtw.setBackgroundColor(newWidgetColor='white', newHeaderColor='green', newHeaderHoverColor='yellow', newHeaderPressedColor='blue',  newCellColor='white', newCellHoverColor='yellow', newCellSelectedColor='purple', newCornerButtonColor='white')
-    # qtw.show()
+    # wps = Widget_PlotStatistic()
+    # wps.show()
+    # wps.add_combination('1,2,3,4')
+    # wps.add_combination('10,20,30,40')
+
+    # wps.updatePlot([1, 1, 2, 3, 4, 5, 5, 5, 6])
 
     mainMenu = Main()
 
-    # elementsSum = []
-    # elementsSumWithIndex = []
-    # for index, element in enumerate(arrVariants):
-    #
-    #     print(index, element)
-    #
-    #     elementsSumWithIndex.append([index, element.sum()])
-    #     elementsSum.append(element.sum())
-    #
-    # print(arrVariants.__len__(), elementsSum.__len__(), set(elementsSum).__len__())
 
-    # qTab = QTabWidget()
-    # qTab.show()
-    # qTab.addTab(QWidget(), 'Tab_1')
-    # qTab.addTab(QWidget(), 'Tab_2')
-
-    # main = QWidget()
-    # main.show()
-    # lay = QGridLayout()
-    # main.setLayout(lay)
-    # sp1 = QSplitter(Qt.Orientation.Horizontal)
-    # w1 = QFrame()
-    # w1.setFrameShape(QFrame.Shape.StyledPanel)
-    # w2 = QFrame()
-    # w2.setFrameShape(QFrame.Shape.StyledPanel)
-    # sp1.addWidget(w1)
-    # sp1.addWidget(w2)
-    #
-    # lay.addWidget(sp1)
-
-    # _100_loto = _100_LOTO()
 
     sys.exit(qApp.exec())

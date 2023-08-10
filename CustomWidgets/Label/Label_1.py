@@ -40,8 +40,7 @@ class Label_1(QLabel):
 
         self.setStyleSheet(self.__backgroundSetting + self.__fontSetting + self.__borderSetting)
 
-    def setFontSettings(self, newFontSize: int = 14, newFontColor: str = 'black', newFontName: str = 'Consolas',
-                        newFontWeight: int = 400, textAlign: str = 'center') -> None:
+    def setFontSettings(self, newFontSize: int = 14, newFontColor: str = 'black', newFontName: str = 'Consolas', newFontWeight: int = 400, textAlign: str = 'center') -> None:
 
         self.__fontSetting = str(
             f'{self.__class__.__name__}'

@@ -87,7 +87,7 @@ class Main(QWidget):
                 self.__pb_back.setDisabled(False)
                 self.__analyticMenu.show()
                 self.__analyticMenu.widgetTicketInfo.createWidget(self.__startMenu.ticketPreview.sidesCount, self.__startMenu.ticketPreview.valuesCountToGuess, self.__startMenu.ticketPreview.digitsMaxValues)
-                self.__analyticMenu.addCombinationsAnalytics(self.__analyticMenu.widgetTicketInfo.ticketPreview)
+                self.__analyticMenu.create_plotsStatistic(self.__analyticMenu.widgetTicketInfo.ticketPreview)
             else:
                 EventNotification().animation_start('Заполните все поля')
 
